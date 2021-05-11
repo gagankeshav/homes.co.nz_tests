@@ -9,3 +9,5 @@ staging_custom_search_url: https://ketu.homes-test.com/map/wellington/lyall-bay/
 prod_akl_search_url: https://homes.co.nz/map/auckland/auckland?searchLoc=
 prod_pet_search_url: https://homes.co.nz/map/lower-hutt/petone?searchLoc=
 prod_custom_search_url: https://homes.co.nz/map/wellington/lyall-bay/puru-crescent/45?searchLoc=
+
+puru_address: '45 Puru Crescent, Lyall Bay'

@@ -40,6 +40,7 @@ RSpec.describe "homes.co.nz Tests" do
 
         # Instantiating the Page objects for the Web Application Page libraries
         @home_page = HomePage.new(@driver)
+        @results_page = Results.new(@driver)
       end
 
       it "Validate that user is able to search for Auckland" do
@@ -59,8 +60,11 @@ RSpec.describe "homes.co.nz Tests" do
       it "Validate that user is able to search specific addresses" do
         @home_page.search_for_location('45 Puru Crescent')
 
-        # Partial match using include is used since search string in the Web Page keeps changing
-        expect(@driver.current_url).to include($config["#{environment}_custom_search_url"])
+        aggregate_failures do
+          # Partial match using include is used since search string in the Web Page keeps changing
+          expect(@driver.current_url).to include($config["#{environment}_custom_search_url"])
+          expect(@results_page.get_result_list[0]).to eq($config["puru_address"])
+        end
       end
 
       after(:all) do
