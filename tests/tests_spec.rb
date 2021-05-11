@@ -46,14 +46,14 @@ RSpec.describe "homes.co.nz Tests" do
       it "Validate that user is able to search for Auckland" do
         @home_page.search_for_location('Auckland')
 
-        # Partial match using include is used since search string in the Web Page keeps changing
+        # Partial match using include is used since search string in the Web Page is dynamic
         expect(@driver.current_url).to include($config["#{environment}_akl_search_url"])
       end
 
       it "Validate that user is able to search for Petone" do
         @home_page.search_for_location('Petone')
 
-        # Partial match using include is used since search string in the Web Page keeps changing
+        # Partial match using include is used since search string in the Web Page is dynamic
         expect(@driver.current_url).to include($config["#{environment}_pet_search_url"])
       end
 
@@ -61,7 +61,7 @@ RSpec.describe "homes.co.nz Tests" do
         @home_page.search_for_location('45 Puru Crescent')
 
         aggregate_failures do
-          # Partial match using include is used since search string in the Web Page keeps changing
+          # Partial match using include is used since search string in the Web Page is dynamic
           expect(@driver.current_url).to include($config["#{environment}_custom_search_url"])
           expect(@results_page.get_result_list[0]).to eq($config["puru_address"])
         end
