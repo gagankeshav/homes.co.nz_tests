@@ -1,0 +1,11 @@
+# Configuration used in the automated tests
+staging: https://ketu.homes-test.com/
+prod: https://homes.co.nz/
+
+staging_akl_search_url: https://ketu.homes-test.com/map/auckland/auckland?searchLoc=
+staging_pet_search_url: https://ketu.homes-test.com/map/lower-hutt/petone?searchLoc=
+staging_custom_search_url: https://ketu.homes-test.com/map/wellington/lyall-bay/puru-crescent/45?searchLoc=
+
+prod_akl_search_url: https://homes.co.nz/map/auckland/auckland?searchLoc=
+prod_pet_search_url: https://homes.co.nz/map/lower-hutt/petone?searchLoc=
+prod_custom_search_url: https://homes.co.nz/map/wellington/lyall-bay/puru-crescent/45?searchLoc=
