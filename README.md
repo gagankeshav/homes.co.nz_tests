@@ -9,10 +9,10 @@ Ruby should be installed on the system.
 
 # Executing the tests
 Download the tests on local system, either as a zip file or clone them using Git.   
-Using either *Git Bash/Command Prompt/Powershell*, navigate to the *root* folder within the repo. on your local system and execute below command to execute the tests:
+Using either *Git Bash/Command Prompt/Powershell/Terminal*, navigate to the *root* folder within the repo. on your local system and execute below command to run the tests:
 - For execution on staging environment
    - sh test_specs.sh staging
 - For execution on production environment
    - sh test_specs.sh prod
-- No parameter executes on both the environments sequentially
+- Absence of any parameter executes on both the environments sequentially
    - sh test_specs.sh
