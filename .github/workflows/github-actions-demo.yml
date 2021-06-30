@@ -9,7 +9,7 @@ jobs:
       - run: wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
       - run: sudo apt install ./google-chrome-stable_current_amd64.deb
       - run: sudo rm google-chrome-stable_current_amd64.deb
-      - run: wget https://github.com/gagankeshav/homes.co.nz_tests.git
-      - run: unzip master.zip
-      - run: sudo rm master.zip
+      - run: wget https://github.com/gagankeshav/homes.co.nz_tests/archive/refs/heads/main.zip
+      - run: unzip main.zip
+      - run: sudo rm main.zip
       - run: sudo sh test_specs.sh staging
