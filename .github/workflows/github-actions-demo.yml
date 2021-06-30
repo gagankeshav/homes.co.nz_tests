@@ -12,4 +12,5 @@ jobs:
       - run: wget https://github.com/gagankeshav/homes.co.nz_tests/archive/refs/heads/main.zip
       - run: unzip main.zip
       - run: sudo rm main.zip
+      - run: cd homes.co.nz_tests-main/
       - run: sudo sh test_specs.sh staging
