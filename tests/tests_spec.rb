@@ -28,8 +28,11 @@ RSpec.describe "homes.co.nz Tests" do
 
       before(:all) do
         # Instantiating webdriver instance for chrome browser
-        @driver = Selenium::WebDriver.for :chrome
-
+        options = Selenium::WebDriver::Chrome::Options.new
+        options.add_argument('--headless')
+        options.add_argument('--no-sandbox')
+        @driver = Selenium::WebDriver.for :chrome, options: options
+    
         # Maximizing the browser window
         @driver.manage.window.maximize
       end
