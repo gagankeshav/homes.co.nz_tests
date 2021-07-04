@@ -32,7 +32,7 @@ RSpec.describe "homes.co.nz Tests" do
         options.add_argument('--headless')
         options.add_argument('--no-sandbox')
         options.add_argument('--remote-debugging-port=9222')
-        puts options
+        puts "Printing chrome options now: #{options}"
         @driver = Selenium::WebDriver.for :chrome, options: options
     
         # Maximizing the browser window
