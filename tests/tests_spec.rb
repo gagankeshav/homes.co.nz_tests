@@ -24,7 +24,7 @@ RSpec.describe "homes.co.nz Tests" do
       end
     end
 
-    context "UI tests" do
+    context "Web UI tests" do
 
       before(:all) do
         # Instantiating webdriver instance for chrome browser
