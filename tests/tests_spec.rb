@@ -17,14 +17,14 @@ RSpec.describe "homes.co.nz Tests" do
   # Iterate over the array outlining the environment(s) that the tests need to be executed upon
   env.each do |environment|
     # Proceed with functional tests only if the application is available
-    context "API Test" do
+    context "API Test for #{environment} env" do
       it "DOA test to validate that #{environment} website is up" do
         response = RestClient.get($config[environment])
         expect(response.code).to eq(200)
       end
     end
 
-    context "Web UI tests" do
+    context "Web UI tests for #{environment} env" do
 
       before(:all) do
         # Instantiating webdriver instance for chrome browser
